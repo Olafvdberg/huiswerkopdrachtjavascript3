@@ -16,11 +16,23 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+function cumlaude() {
+    return grades.filter(x => x ==8 || x ==9 || x == 10).length
+}
+
+console.log(cumlaude())
+
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+function cumlaudeimproved() {
+    return grades.filter(x => x ==8 || x ==9 || x == 10).length
+}
+
+console.log(cumlaudeimproved())
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
@@ -42,11 +54,43 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+let count = 0;
+let total = 0;
+
+function calculateaverage() {
+    for (let i = 0; i < grades.length; i++) {
+        if(grades[i] !== undefined) {
+            count++;
+            total += grades [i]
+        }
+    }
+    let avg = total / count;
+    return avg;
+}
+
+console.log(calculateaverage())
+
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+let count2 = 0;
+let total2 = 0;
+
+function calculateaveragebetter() {
+    for (let i = 0; i < grades.length; i++) {
+        if(grades[i] !== undefined) {
+            count2++;
+            total2 += grades [i]
+        }
+    }
+    let avg2 = total2 / count2;
+    return avg2;
+}
+
+console.log(calculateaveragebetter())
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -58,9 +102,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+let count3 = 0;
+let total3 = 0;
 
+function calculateaveragebetter3() {
+    for (let i = 0; i < grades.length; i++) {
+        if(grades[i] !== undefined) {
+            count3++;
+            total3 += grades [i]
+        }
+    }
+    let avg3 = total3 / count3;
+    return Math.round(avg3*100)/100;
+}
 
-
+console.log(calculateaveragebetter3())
 /* Bonusopdracht: hoogste cijfer */
 
 /* 3a: Script schrijven  */
